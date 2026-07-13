@@ -1,0 +1,37 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# IDE files
+.idea/
+.vscode/
+
+# Local data (the original dataset is not redistributed)
+dataset/*.csv
+dataset/*.xlsx
+dataset/*.xls
+
+# Experimental outputs and generated assets
+result/
+result1/
+results/
+outputs/
+logs/
+checkpoints/
+*.log
+*.pt
+*.pth
+*.ckpt
+*.db
+experiment_*.csv
+*.pdf
+*.png
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
