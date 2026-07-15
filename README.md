@@ -49,8 +49,6 @@ PeerWithCTX.csv
 
 For example, Setting 2 uses the suffix `_12_1000`, whereas Setting 4 uses `_100_5000`. The context files must contain the columns `as`, `country`, `isp`, and `timezone`.
 
-The preprocessing code performs a requester-peer-pair-level train/validation/test split shared by all four QoS targets. SR, RB, and RH remain on their original `[0, 1]` scales. RTT is transformed with `log(1 + RTT)` and scaled using the training-set maximum only; the same factor is then applied to validation and test data.
-
 ## Running CK-GAT
 
 The following command runs the multi-task CK-GAT configuration with KAN and GradNorm:
@@ -79,9 +77,3 @@ python run_centralized_gnn.py \
 ```
 
 Use `--train_density` values from `0.01` to `0.05` to reproduce the evaluated sparsity levels. Use the same seed and split settings when comparing model variants.
-
-## Notes
-
-- Context-aware graphs use only static contextual attributes and do not use QoS target labels.
-- The test set is evaluated only after the checkpoint with the best validation SR MAE has been selected.
-- The code automatically falls back to CPU when CUDA is unavailable.
