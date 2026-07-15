@@ -31,7 +31,10 @@ Install the PyTorch build appropriate for your CUDA environment when necessary.
 
 ## Dataset preparation
 
-The experiments use processed requester-peer QoS matrices derived from the H-BRP dataset. The original dataset is not redistributed here because it was collected and provided by the authors of the original dataset study.
+The experiments use processed requester-peer QoS matrices derived from the H-BRP dataset. The original dataset is not redistributed in this repository. For dataset availability, access, and preprocessing instructions, please refer to the dataset source paper and its accompanying official repository:
+
+- P. Zheng, Z. Zheng, and L. Chen, "Selecting reliable blockchain peers via hybrid blockchain reliability prediction," *IET Software*, vol. 17, no. 4, pp. 362--377, 2023. [https://doi.org/10.1049/sfw2.12118](https://doi.org/10.1049/sfw2.12118)
+- Original H-BRP data and implementation repository: [https://github.com/InPlusLab/BlockchainReliabilityPrediction](https://github.com/InPlusLab/BlockchainReliabilityPrediction)
 
 Place the following processed files in `dataset/` before running the code:
 
@@ -82,4 +85,3 @@ Use `--train_density` values from `0.01` to `0.05` to reproduce the evaluated sp
 - Context-aware graphs use only static contextual attributes and do not use QoS target labels.
 - The test set is evaluated only after the checkpoint with the best validation SR MAE has been selected.
 - The code automatically falls back to CPU when CUDA is unavailable.
-

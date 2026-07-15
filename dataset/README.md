@@ -1,6 +1,9 @@
 # Dataset directory
 
-The dataset is not included in this repository because redistribution permission belongs to the original data providers.
+The dataset is not included in this repository. For dataset availability, access, and preprocessing instructions, please refer to the H-BRP source paper and its accompanying official repository:
+
+- P. Zheng, Z. Zheng, and L. Chen, "Selecting reliable blockchain peers via hybrid blockchain reliability prediction," *IET Software*, vol. 17, no. 4, pp. 362--377, 2023. [https://doi.org/10.1049/sfw2.12118](https://doi.org/10.1049/sfw2.12118)
+- Original H-BRP data and implementation repository: [https://github.com/InPlusLab/BlockchainReliabilityPrediction](https://github.com/InPlusLab/BlockchainReliabilityPrediction)
 
 After obtaining and preprocessing the H-BRP data, place the four requester-peer QoS matrices and two context files in this directory:
 
