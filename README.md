@@ -8,8 +8,10 @@ CK-GAT combines context-as-node graph construction, dual-branch graph attention,
 
 ```text
 .
-|-- config.py                         # Command-line configuration
-|-- run_centralized_gnn.py            # Training and evaluation entry point
+|-- config/                           # Configuration package
+|   |-- __init__.py
+|   `-- config.py                     # Command-line configuration
+|-- main.py                           # Training and evaluation entry point
 |-- core_utils/                       # Training, logging, early stopping, and metrics
 |-- data_processing/                  # Pair-level splitting and QoS preprocessing
 |-- graph_construction/               # Context-aware user and service graph construction
@@ -54,7 +56,7 @@ For example, Setting 2 uses the suffix `_12_1000`, whereas Setting 4 uses `_100_
 The following command runs the multi-task CK-GAT configuration with KAN and GradNorm:
 
 ```bash
-python run_centralized_gnn.py \
+python main.py \
   --dataset_path dataset \
   --metric_file_suffix _12_1000 \
   --train_density 0.01 \
